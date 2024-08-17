@@ -1,5 +1,6 @@
 import * as THREE from "three";
 import { OrbitControls } from "jsm/controls/OrbitControls.js";
+import getStarfield from "./js/getStarfield.js";
 
 const width = window.innerWidth;
 const height = window.innerHeight;
@@ -16,6 +17,9 @@ document.body.appendChild(renderer.domElement);
 const earthGroup = new THREE.Group();
 earthGroup.rotation.z = (-23.4 * Math.PI) / 180;
 scene.add(earthGroup);
+
+const stars = getStarfield({numStars: 3000});
+scene.add(stars);
 
 new OrbitControls(camera, renderer.domElement);
 const loader = new THREE.TextureLoader();
