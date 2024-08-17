@@ -25,7 +25,7 @@ export default function getStarfield({ numStars = 500 } = {}) {
     let p = randomSpherePoint();
     const { pos, hue } = p;
     positions.push(p);
-    col = new THREE.Color().setHSL(hue, 0.2, Math.random());
+    col = new THREE.Color().setHSL(hue, 0.4, Math.random());
     verts.push(pos.x, pos.y, pos.z);
     colors.push(col.r, col.g, col.b);
   }
@@ -36,7 +36,7 @@ export default function getStarfield({ numStars = 500 } = {}) {
     size: 0.2,
     vertexColors: true,
     map: new THREE.TextureLoader().load(
-      "./textures/stars/circle.png"
+      "./images/stars/circle.png"
     ),
   });
   const points = new THREE.Points(geo, mat);

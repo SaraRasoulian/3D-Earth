@@ -28,20 +28,20 @@ new OrbitControls(camera, renderer.domElement);
 const loader = new THREE.TextureLoader();
 const geometry = new THREE.IcosahedronGeometry(1, 14);
 const material = new THREE.MeshPhongMaterial({
-  map: loader.load("./textures/earthmap1k.jpg"),
+  map: loader.load("./images/earthmap1k.jpg"),
 });
 const earthMesh = new THREE.Mesh(geometry, material);
 earthGroup.add(earthMesh);
 
 const lightsMat = new THREE.MeshBasicMaterial({
-  map: loader.load("./textures/earthlights1k.jpg"),
+  map: loader.load("./images/earthlights1k.jpg"),
   blending: THREE.AdditiveBlending,
 });
 const lightsMesh = new THREE.Mesh(geometry, lightsMat);
 earthGroup.add(lightsMesh);
 
 const cloudsMat = new THREE.MeshStandardMaterial({
-  map: loader.load("./textures/cloud_combined_2048.jpg"),
+  map: loader.load("./images/cloud_combined_2048.jpg"),
   transparent: true,
   opacity: 0.9,
   blending: THREE.AdditiveBlending,
