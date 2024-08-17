@@ -7,7 +7,7 @@ const width = window.innerWidth;
 const height = window.innerHeight;
 
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(50, width / height, 0.1, 1000);
+const camera = new THREE.PerspectiveCamera(40, width / height, 0.1, 1000);
 camera.position.z = 5;
 
 const renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -34,7 +34,7 @@ const earthMesh = new THREE.Mesh(geometry, material);
 earthGroup.add(earthMesh);
 
 const lightsMat = new THREE.MeshBasicMaterial({
-  map: loader.load("./images/earthlights1k.jpg"),
+  map: loader.load("./images/earthlights2k.jpg"),
   blending: THREE.AdditiveBlending,
 });
 const lightsMesh = new THREE.Mesh(geometry, lightsMat);
@@ -56,7 +56,7 @@ const glowMesh = new THREE.Mesh(geometry, fresnelMat);
 glowMesh.scale.setScalar(1.01);
 earthGroup.add(glowMesh);
 
-const stars = getStarfield({ numStars: 3000 });
+const stars = getStarfield({ numStars: 5000 });
 scene.add(stars);
 
 const sunLight = new THREE.DirectionalLight(0xffffff, 2.0);
@@ -67,7 +67,7 @@ function animate() {
   requestAnimationFrame(animate);
   earthMesh.rotation.y += 0.0019;
   lightsMesh.rotation.y += 0.0019;
-  cloudsMesh.rotation.y += 0.0024;
+  cloudsMesh.rotation.y += 0.0026;
   glowMesh.rotation.y += 0.002;
   stars.rotation.y -= 0.0002;
   renderer.render(scene, camera);
