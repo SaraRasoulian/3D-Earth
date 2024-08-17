@@ -39,7 +39,18 @@ const lightsMat = new THREE.MeshBasicMaterial({
 const lightsMesh = new THREE.Mesh(geometry, lightsMat);
 earthGroup.add(lightsMesh);
 
-const stars = getStarfield({ numStars: 2000 });
+const cloudsMat = new THREE.MeshStandardMaterial({
+  map: loader.load("./textures/cloud_combined_2048.jpg"),
+  transparent: true,
+  opacity: 0.8,
+  blending: THREE.AdditiveBlending,
+});
+
+const cloudsMesh = new THREE.Mesh(geometry, cloudsMat);
+cloudsMesh.scale.setScalar(1.003);
+earthGroup.add(cloudsMesh);
+
+const stars = getStarfield({ numStars: 3000 });
 scene.add(stars);
 
 const sunLight = new THREE.DirectionalLight(0xffffff, 2.0);
@@ -48,9 +59,9 @@ scene.add(sunLight);
 
 function animate() {
   requestAnimationFrame(animate);
-
-  earthMesh.rotation.y += 0.002;
-  lightsMesh.rotation.y += 0.002;
+  earthMesh.rotation.y += 0.0019;
+  lightsMesh.rotation.y += 0.0019;
+  cloudsMesh.rotation.y += 0.0024;
   stars.rotation.y -= 0.0002;
   renderer.render(scene, camera);
 }
