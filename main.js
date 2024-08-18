@@ -28,7 +28,7 @@ new OrbitControls(camera, renderer.domElement);
 const loader = new THREE.TextureLoader();
 const geometry = new THREE.IcosahedronGeometry(1, 14);
 const material = new THREE.MeshPhongMaterial({
-  map: loader.load("./images/earthmap1k.jpg"),
+  map: loader.load("./images/earthmap.jpg"),
 });
 const earthMesh = new THREE.Mesh(geometry, material);
 earthGroup.add(earthMesh);
