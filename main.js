@@ -34,7 +34,7 @@ const earthMesh = new THREE.Mesh(geometry, material);
 earthGroup.add(earthMesh);
 
 const lightsMat = new THREE.MeshBasicMaterial({
-  map: loader.load("./images/earthlights2k.jpg"),
+  map: loader.load("./images/earth_lights.png"),
   blending: THREE.AdditiveBlending,
 });
 const lightsMesh = new THREE.Mesh(geometry, lightsMat);
@@ -60,7 +60,7 @@ const stars = getStarfield({ numStars: 5000 });
 scene.add(stars);
 
 const sunLight = new THREE.DirectionalLight(0xffffff, 2.0);
-sunLight.position.set(-2, 0.5, 1.5);
+sunLight.position.set(-2.2, 0.7, 1.6);
 scene.add(sunLight);
 
 function animate() {
