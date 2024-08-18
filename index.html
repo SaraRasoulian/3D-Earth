@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>My first three.js app</title>
-		<style>
-			body { margin: 0; }
-		</style>
-          <script type="importmap">
-			{
-				"imports": {
-					"three": "https://cdn.jsdelivr.net/npm/three@0.161/build/three.module.js",
+  <head>
+    <meta charset="utf-8" />
+    <title>My first three.js app</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+		overflow-y: hidden;
+      }
+    </style>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.161/build/three.module.js",
           "jsm/": "https://cdn.jsdelivr.net/npm/three@0.161/examples/jsm/"
         }
-			}
-		</script>
-	</head>
-	<body>
-		<script type="module" src="main.js"></script>
-	</body>
+      }
+    </script>
+  </head>
+  <body>
+    <script type="module" src="main.js"></script>
+  </body>
 </html>
