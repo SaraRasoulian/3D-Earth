@@ -6,7 +6,9 @@
 
 - [Tutorial on Youtube by Robot Bobby](https://www.youtube.com/watch?v=FntV9iEJ0tU)
  
-- [Earth Map & Earth Lights Images](https://planetpixelemporium.com/earth8081.html)
+- [Earth Map Image](https://planetpixelemporium.com/earth8081.html)
+
+- [Earth Lights Image](https://science.nasa.gov/resource/night-lights-big-cities/)
 
 - [Cloud Map Image](https://visibleearth.nasa.gov/images/57747/bluemarble-clouds)
 
